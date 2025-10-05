@@ -17,7 +17,7 @@ for i in range(1, rounds + 1):
     player = input('👉 Твой ход: ' )
     
     if (pc == rock and player == 'камень') or (pc == scissor and player == 'ножницы') or (pc == paper and player == 'бумага'):
-        print('😐 Ничья… ну так себе замес.')
+        print('😐 Ничья… так себе замес.')
         draw += 1
     
     elif (pc == scissor and player == 'камень') or (pc == paper and player == 'ножницы') or (pc == rock and player == 'бумага'):

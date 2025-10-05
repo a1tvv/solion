@@ -4,7 +4,7 @@ letters = []
 numbers = []
 
 for i in data_tuple:
-    if type(i)==str):
+    if type(i)==str:
         letters.append(i)
     else:
         numbers.append(i)
