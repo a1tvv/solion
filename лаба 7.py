@@ -1,4 +1,4 @@
-# ===== Суперкласс =====
+# Суперклас
 class Animal:
     def __init__(self, name, habitat, food):
         self.name = name
@@ -12,7 +12,7 @@ class Animal:
         return f"Животное: {self.name}\nСреда обитания: {self.habitat}\nПитание: {self.food}"
 
 
-# ===== Подкласс Млекопитающие =====
+
 class Mammal(Animal):
     def __init__(self, name, habitat, food, has_fur):
         super().__init__(name, habitat, food)
@@ -26,7 +26,6 @@ class Mammal(Animal):
         return super().__str__() + f"\nОсобенность: {fur_status}"
 
 
-# ===== Подкласс Пресмыкающиеся =====
 class Reptile(Animal):
     def __init__(self, name, habitat, food, is_venomous):
         super().__init__(name, habitat, food)
@@ -40,7 +39,7 @@ class Reptile(Animal):
         return super().__str__() + f"\nОсобенность: {venom_status}"
 
 
-# ===== Объекты животных =====
+#  Объекты животных 
 lion = Mammal(name="Лев", habitat="Саванна", food="Мясо", has_fur=True)
 snake = Reptile(name="Кобра", habitat="Джунгли", food="Грызуны", is_venomous=True)
 
@@ -52,7 +51,7 @@ print(snake.bask_in_sun())
 print()
 
 
-# ===== Класс Zoo_show =====
+#  Класс зу шоу
 class Zoo_show:
     def __init__(self):
         self.shows = {
@@ -75,14 +74,14 @@ class Zoo_show:
                     print(f"\nВы выбрали: {selected['name']}")
                     print(f"Описание: {selected['description']}")
                     print(f"Стоимость билета: {selected['price']} сом")
-                    break  # выход из цикла после успешного выбора
+                    break 
                 else:
                     print("Такого шоу нет. Попробуйте снова.\n")
             except ValueError:
                 print("Ошибка! Введите, пожалуйста, число.\n")
 
 
-# ===== Пример работы =====
+# Пример работы 
 zoo = Zoo_show()
 zoo.show_info()
 zoo.choose_ticket()
